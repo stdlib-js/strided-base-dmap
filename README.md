@@ -22,7 +22,7 @@ limitations under the License.
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] [![dependencies][dependencies-image]][dependencies-url]
 
-> Apply a unary function accepting and returning double-precision floating-point numbers to each element in a double-precision floating-point strided input array and assign each result to an element in a double-precision floating-point strided output array.
+> Apply a unary function to a double-precision floating-point strided input array and assign results to a double-precision floating-point strided output array.
 
 <section class="intro">
 
@@ -50,7 +50,7 @@ var dmap = require( '@stdlib/strided-base-dmap' );
 
 #### dmap( N, x, strideX, y, strideY, fcn )
 
-Applies a unary function accepting and returning double-precision floating-point numbers to each element in a double-precision floating-point strided input array and assigns each result to an element in a double-precision floating-point strided output array.
+Applies a unary function to a double-precision floating-point strided input array and assigns results to a double-precision floating-point strided output array.
 
 ```javascript
 var Float64Array = require( '@stdlib/array-float64' );
@@ -111,7 +111,7 @@ dmap( N, x1, -2, y1, 1, abs );
 
 #### dmap.ndarray( N, x, strideX, offsetX, y, strideY, offsetY, fcn )
 
-Applies a unary function accepting and returning double-precision floating-point numbers to each element in a double-precision floating-point strided input array and assigns each result to an element in a double-precision floating-point strided output array using alternative indexing semantics.
+Applies a unary function to a double-precision floating-point strided input array and assigns results to a double-precision floating-point strided output array using alternative indexing semantics.
 
 ```javascript
 var Float64Array = require( '@stdlib/array-float64' );
@@ -227,7 +227,7 @@ npm install @stdlib/strided-base-dmap
 
 #### stdlib_strided_dmap( N, \*X, strideX, \*Y, strideY, fcn )
 
-Applies a unary function accepting and returning double-precision floating-point numbers to each element in a double-precision floating-point strided input array and assigns each result to an element in a double-precision floating-point strided output array.
+Applies a unary function to a double-precision floating-point strided input array and assigns results to a double-precision floating-point strided output array.
 
 ```c
 #include <stdint.h>
@@ -317,6 +317,16 @@ int main() {
 </section>
 
 <!-- /.c -->
+
+<!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
+
+<section class="related">
+
+</section>
+
+<!-- /.related -->
+
+<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
 
 <section class="main-repo" >
