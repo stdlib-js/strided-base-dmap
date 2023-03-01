@@ -38,12 +38,12 @@ C -->|bundle| D[esm];
 C -->|bundle| E[deno];
 C -->|bundle| F[umd];
 
-click A href "https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/strided/base/dmap"
-click B href "https://github.com/stdlib-js/strided-base-dmap/tree/main"
-click C href "https://github.com/stdlib-js/strided-base-dmap/tree/production"
-click D href "https://github.com/stdlib-js/strided-base-dmap/tree/esm"
-click E href "https://github.com/stdlib-js/strided-base-dmap/tree/deno"
-click F href "https://github.com/stdlib-js/strided-base-dmap/tree/umd"
+%% click A href "https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/strided/base/dmap"
+%% click B href "https://github.com/stdlib-js/strided-base-dmap/tree/main"
+%% click C href "https://github.com/stdlib-js/strided-base-dmap/tree/production"
+%% click D href "https://github.com/stdlib-js/strided-base-dmap/tree/esm"
+%% click E href "https://github.com/stdlib-js/strided-base-dmap/tree/deno"
+%% click F href "https://github.com/stdlib-js/strided-base-dmap/tree/umd"
 ```
 
 [stdlib-url]: https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/strided/base/dmap
