@@ -30,20 +30,30 @@ limitations under the License.
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/strided-base-dmap
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import dmap from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-dmap@esm/index.mjs';
-```
-
-You can also import the following named exports from the package:
-
-```javascript
-import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-dmap@esm/index.mjs';
+var dmap = require( '@stdlib/strided-base-dmap' );
 ```
 
 #### dmap( N, x, strideX, y, strideY, fcn )
@@ -51,8 +61,8 @@ import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-dmap
 Applies a unary function to a double-precision floating-point strided input array and assigns results to a double-precision floating-point strided output array.
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
-import abs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
+var abs = require( '@stdlib/math-base-special-abs' );
 
 var x = new Float64Array( [ -2.0, 1.0, 3.0, -5.0, 4.0, 0.0, -1.0, -3.0 ] );
 
@@ -73,8 +83,8 @@ The function accepts the following arguments:
 The `N` and `stride` parameters determine which elements in `x` and `y` are accessed at runtime. For example, to index every other value in `x` and to index the first `N` elements of `y` in reverse order,
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
-import abs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
+var abs = require( '@stdlib/math-base-special-abs' );
 
 var x = new Float64Array( [ -1.0, -2.0, -3.0, -4.0, -5.0, -6.0 ] );
 var y = new Float64Array( [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ] );
@@ -86,8 +96,8 @@ dmap( 3, x, 2, y, -1, abs );
 Note that indexing is relative to the first index. To introduce an offset, use [`typed array`][@stdlib/array/float64] views.
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
-import abs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
+var abs = require( '@stdlib/math-base-special-abs' );
 
 // Initial arrays...
 var x0 = new Float64Array( [ -1.0, -2.0, -3.0, -4.0, -5.0, -6.0 ] );
@@ -106,8 +116,8 @@ dmap( 3, x1, -2, y1, 1, abs );
 Applies a unary function to a double-precision floating-point strided input array and assigns results to a double-precision floating-point strided output array using alternative indexing semantics.
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
-import abs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
+var abs = require( '@stdlib/math-base-special-abs' );
 
 var x = new Float64Array( [ -1.0, -2.0, -3.0, -4.0, -5.0 ] );
 var y = new Float64Array( [ 0.0, 0.0, 0.0, 0.0, 0.0 ] );
@@ -124,8 +134,8 @@ The function accepts the following additional arguments:
 While [`typed array`][@stdlib/array/float64] views mandate a view offset based on the underlying `buffer`, the `offsetX` and `offsetY` parameters support indexing semantics based on starting indices. For example, to index every other value in `x` starting from the second value and to index the last `N` elements in `y` in reverse order,
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
-import abs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
+var abs = require( '@stdlib/math-base-special-abs' );
 
 var x = new Float64Array( [ -1.0, -2.0, -3.0, -4.0, -5.0, -6.0 ] );
 var y = new Float64Array( [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ] );
@@ -150,16 +160,11 @@ dmap.ndarray( 3, x, 2, 1, y, -1, y.length-1, abs );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import round from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@esm/index.mjs';
-import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
-import dmap from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-dmap@esm/index.mjs';
+```javascript
+var round = require( '@stdlib/math-base-special-round' );
+var randu = require( '@stdlib/random-base-randu' );
+var Float64Array = require( '@stdlib/array-float64' );
+var dmap = require( '@stdlib/strided-base-dmap' );
 
 function scale( x ) {
     return x * 10.0;
@@ -177,10 +182,6 @@ console.log( y );
 
 dmap.ndarray( x.length, x, 1, 0, y, -1, y.length-1, scale );
 console.log( y );
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -189,7 +190,122 @@ console.log( y );
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/strided/base/dmap.h"
+```
+
+#### stdlib_strided_dmap( N, \*X, strideX, \*Y, strideY, fcn )
+
+Applies a unary function to a double-precision floating-point strided input array and assigns results to a double-precision floating-point strided output array.
+
+```c
+#include <stdint.h>
+
+static double scale( const double x ) {
+    return x * 10.0;
+}
+
+double X[] = { 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 };
+double Y[] = { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 };
+
+int64_t N = 6;
+
+stdlib_strided_dmap( N, X, 1, Y, 1, scale );
+```
+
+The function accepts the following arguments:
+
+-   **N**: `[in] int64_t` number of indexed elements.
+-   **X**: `[in] double*` input array.
+-   **strideX** `[in] int64_t` index increment for `X`.
+-   **Y**: `[out] double*` output array.
+-   **strideY**: `[in] int64_t` index increment for `Y`.
+-   **fcn**: `[in] double (*fcn)( double )` unary function to apply.
+
+```c
+void stdlib_strided_dmap( const int64_t N, const double *X, const int64_t strideX, double *Y, const int64_t strideY, double (*fcn)( double ) );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/strided/base/dmap.h"
+#include <stdint.h>
+#include <stdio.h>
+#include <inttypes.h>
+
+// Define a callback:
+static double scale( const double x ) {
+    return x * 10.0;
+}
+
+int main() {
+    // Create an input strided array:
+    double X[] = { 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 };
+
+    // Create an output strided array:
+    double Y[] = { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 };
+
+    // Specify the number of elements:
+    int64_t N = 6;
+
+    // Define the strides:
+    int64_t strideX = 1;
+    int64_t strideY = -1;
+
+    // Apply the callback:
+    stdlib_strided_dmap( N, X, strideX, Y, strideY, scale );
+
+    // Print the results:
+    for ( int64_t i = 0; i < N; i++ ) {
+        printf( "Y[ %"PRId64" ] = %lf\n", i, Y[ i ] );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -208,7 +324,7 @@ console.log( y );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -252,7 +368,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 -->
 
 [chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://gitter.im/stdlib-js/stdlib/
+[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
 
 [stdlib]: https://github.com/stdlib-js/stdlib
 
@@ -268,7 +384,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/strided-base-dmap/main/LICENSE
 
-[@stdlib/array/float64]: https://github.com/stdlib-js/array-float64/tree/esm
+[@stdlib/array/float64]: https://github.com/stdlib-js/array-float64
 
 </section>
 
