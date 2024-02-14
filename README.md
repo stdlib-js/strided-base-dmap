@@ -48,13 +48,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import dmap from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-dmap@deno/mod.js';
+import dmap from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-dmap@v0.2.0-deno/mod.js';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-dmap@deno/mod.js';
+import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-dmap@v0.2.0-deno/mod.js';
 ```
 
 #### dmap( N, x, strideX, y, strideY, fcn )
@@ -165,7 +165,7 @@ dmap.ndarray( 3, x, 2, 1, y, -1, y.length-1, abs );
 import round from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@deno/mod.js';
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@deno/mod.js';
 import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
-import dmap from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-dmap@deno/mod.js';
+import dmap from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-dmap@v0.2.0-deno/mod.js';
 
 function scale( x ) {
     return x * 10.0;
