@@ -48,13 +48,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import dmap from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-dmap@esm/index.mjs';
+import dmap from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-dmap@v0.2.0-esm/index.mjs';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-dmap@esm/index.mjs';
+import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-dmap@v0.2.0-esm/index.mjs';
 ```
 
 #### dmap( N, x, strideX, y, strideY, fcn )
@@ -170,7 +170,7 @@ dmap.ndarray( 3, x, 2, 1, y, -1, y.length-1, abs );
 import round from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@esm/index.mjs';
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
 import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
-import dmap from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-dmap@esm/index.mjs';
+import dmap from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-dmap@v0.2.0-esm/index.mjs';
 
 function scale( x ) {
     return x * 10.0;
