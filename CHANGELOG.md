@@ -24,6 +24,7 @@ This release closes the following issue:
 
 <details>
 
+-   [`f7304bd`](https://github.com/stdlib-js/stdlib/commit/f7304bd6d7ffd88df213dff3b3ca5d380443dcfc) - **bench:** refactor to use string interpolation in `@stdlib/strided-base` [(#11449)](https://github.com/stdlib-js/stdlib/pull/11449) _(by Uday Kakade, Karan Anand)_
 -   [`647a947`](https://github.com/stdlib-js/stdlib/commit/647a9477f5e26eb473784078c5bf6cd91fee8503) - **bench:** refactor to use dynamic memory allocation in `strided/base/dmap` [(#11566)](https://github.com/stdlib-js/stdlib/pull/11566) _(by Karan Anand)_
 -   [`6c00f92`](https://github.com/stdlib-js/stdlib/commit/6c00f921a490322381a5d490412686d6441535fd) - **chore:** fix C lint errors [(#11279)](https://github.com/stdlib-js/stdlib/pull/11279) _(by Geo Daoyu)_
 
@@ -37,10 +38,11 @@ This release closes the following issue:
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
 -   Geo Daoyu
 -   Karan Anand
+-   Uday Kakade
 
 </section>
 
